@@ -1,0 +1,114 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Love Letter</title>
+    <style>
+        body {
+            font-family: 'Arial', sans-serif;
+            background-color: #fce4ec;
+            margin: 0;
+            padding: 0;
+            position: relative;
+            overflow-y: scroll; /* Allow vertical scrolling */
+            min-height: 100vh; /* Ensure the body takes at least the full viewport height */
+        }
+
+        /* Styling for heart shape */
+        .heart {
+            position: absolute;
+            width: 30px;
+            height: 30px;
+            background-color: red;
+            clip-path: polygon(50% 0%, 100% 25%, 75% 75%, 50% 100%, 25% 75%, 0% 25%);
+            opacity: 0.8;
+        }
+
+        /* Container styling */
+        .container {
+            width: 400px;
+            margin: 50px auto;
+            padding: 30px;
+            border-radius: 15px;
+            box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+            text-align: center;
+            background: rgba(255, 255, 255, 0.9); /* Slight opacity for text readability */
+            position: relative;
+            z-index: 2;
+            color: #fff;
+            margin-bottom: 50px; /* Add space between multiple containers if needed */
+        }
+
+        .flowers {
+            background-image: url('https://www.w3schools.com/w3images/flowers.jpg');
+            background-size: cover;
+            background-position: center;
+            height: 200px;
+            border-radius: 10px;
+            margin-bottom: 20px;
+        }
+
+        h1 {
+            color: #d81b60;
+            font-size: 36px;
+            z-index: 3;
+        }
+
+        p {
+            font-size: 18px;
+            color: #000000;
+            line-height: 1.6;
+            z-index: 3;
+        }
+
+        .signature {
+            font-size: 24px;
+            font-style: italic;
+            color: #d81b60;
+            margin-top: 20px;
+            z-index: 3;
+        }
+
+    </style>
+</head>
+<body>
+
+<div class="container">
+    <div class="flowers"></div>
+    <h1>HAPPY NEW YEAR MY LIFE RATNA,</h1>
+    <p>
+        THANKS FOR BEING MY LIFE SAVER AND THE QUEEN OF MY HEART. HERE I SEND U THIS, GIVING U ALL MY HEART N MY SOUL.
+        TRUST ME, U ARE THE ONLY N ONLY PERSON I WILL KEEP ABOVE ME ALWAYS.
+        AND THIS IS JUST A BEGINNING, WE HAVE ALOTTTT TO FEEL TOGETHER, U ARE MY LADYLOVE, BOO BOO, CUPCAKE, BACKCHOD AND HOPEFULLY MY FUTURE WIFEY.
+        HOPE U CAN RELATE THESE RED DIAMONDS TO UR NAME.
+    </p>
+    <p class="signature">I LOVE U INFINITYYYYY RATNA,</p>
+    <p class="signature">UR NAV</p>
+</div>
+
+<script>
+    // Function to create and position hearts randomly
+    function createRandomHearts(numHearts) {
+        for (let i = 0; i < numHearts; i++) {
+            let heart = document.createElement('div');
+            heart.classList.add('heart');
+            
+            // Random position within the body element
+            let x = Math.random() * window.innerWidth; // X position
+            let y = Math.random() * window.innerHeight; // Y position
+            
+            heart.style.left = `${x}px`;
+            heart.style.top = `${y}px`;
+            
+            // Append the heart to the body
+            document.body.appendChild(heart);
+        }
+    }
+
+    // Create 50 hearts randomly placed in the outer zone
+    createRandomHearts(50);
+</script>
+
+</body>
+</html>
